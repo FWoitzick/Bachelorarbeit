@@ -1,3 +1,5 @@
+package server;
+
 import authentication.ServerAuthenticator;
 import communication.CommicationController;
 
@@ -5,7 +7,7 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class MainServer {
+public class ServerController {
 
     private int PORT   = 8080;
     private ServerSocket serverSocket = null;
@@ -14,7 +16,7 @@ public class MainServer {
     private ServerAuthenticator authenticator;
 
     public void run() {
-        System.out.println("Starting Server");
+        System.out.println("Starting server.Server");
         synchronized (this) {
             this.runningThread = Thread.currentThread();
         }
